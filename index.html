@@ -2,140 +2,186 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Resume</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="css/style.css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Resume - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body id="page-top">
 
-  <div class="resume">
-    <div class="base">
-      <div class="profile">
-        <div class="photo">
-          <img src="https://avatars1.githubusercontent.com/u/28092511?s=400&u=a445a3cfde43b3031e23d6311fae59d8b3adc872&v=4" />
-        </div>
-        <div class="info">
-          <h1 class="name">Andrea Bruno</h1>
-        </div>
-      </div>
-      <div class="about">
-        <h3>About Me</h3>
-        MSc Computer Science student @ University of Pisa </span>
-      </div>
-      <div class="contact">
-        <h3>Contact Me</h3>
-        <div class="email"><a href="mailto:andybbruno@gmail.com"><i class="fas fa-envelope"></i><span>Mail</span></a></div>
-        <div class="website"><a href="http://t.me/andybbruno" target="_blank"> <i class="fab fa-telegram"></i><span>Telegram</span></a></div>
-      </div>
-      <div class="follow">
-        <h3>Follow Me</h3>
-        <div class="box">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Andrea Bruno</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/img.png" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+      <div class="my-auto">
+        <h1 class="mb-0">Andrea
+          <span class="text-primary">Bruno</span>
+        </h1>
+        <p class="lead mb-5"> </p>
+        <div class="social-icons">
           <a href="https://www.facebook.com/andybbruno/" target="_blank"><i class="fab fa-facebook"></i></a>
           <a href="https://www.instagram.com/andybbruno/" target="_blank"><i class="fab fa-instagram "></i></a>
           <a href="https://www.linkedin.com/in/andrea-bruno/" target="_blank"><i class="fab fa-linkedin"></i></a>
           <a href="http://github.com/andybbruno" target="_blank"><i class="fab fa-github"></i></a>
         </div>
       </div>
-    </div>
-    <div class="func">
-      <div class="work">
-        <h3><i class="fa fa-briefcase"></i>Experience</h3>
-        <ul>
-          <li><span>Internship</span><small>CNR - National Research Council </small><small>Jan 2018 - July 2018</small></li>
-          <li><span>System Administrator</span><small>Assenza di Segnale</small><small>Jul 2012 - Sep 2014</small></li>
-        </ul>
-      </div>
+    </section>
 
-      <div class="edu">
-        <h3><i class="fa fa-graduation-cap"></i>Education</h3>
-        <ul>
-          <li><span>MSc Computer Science</span><small>University of Pisa</small><small>Sep 2018 - Now</small></li>
-          <li><span>BSc Computer Science</span><small>University of Bari</small><small>Sep 2014 - Jul 2018</small></li>
-        </ul>
-      </div>
+    <hr class="m-0">
 
-      <div class="skills-prog">
-        <h3><i class="fas fa-code"></i>Programming Skills</h3>
-        <ul>
-          <li data-percent="95"><span>Java</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
-          </li>
-          <li data-percent="75"><span>C</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
-          </li>
-          <li data-percent="65"><span>Python</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
-          </li>
-          <li data-percent="65"><span>MATLAB</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
-          </li>
-          <li data-percent="50"><span>Haskell</span>
-            <div class="skills-bar">
-              <div class="bar"></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="skills-soft">
-        <h3><i class="fas fa-bezier-curve"></i>Tecnologies</h3>
-        <ul>
-          <li data-percent="90">
-            <svg viewbox="0 0 100 100">
-              <circle cx="50" cy="50" r="45"></circle>
-              <circle class="cbar" cx="50" cy="50" r="45"></circle>
-            </svg><span>Networing</span><small></small>
-          </li>
-          <li data-percent="80">
-            <svg viewbox="0 0 100 100">
-              <circle cx="50" cy="50" r="45"></circle>
-              <circle class="cbar" cx="50" cy="50" r="45"></circle>
-            </svg><span>Multimedia</span><small></small>
-          </li>
-          <li data-percent="60">
-            <svg viewbox="0 0 100 100">
-              <circle cx="50" cy="50" r="45"></circle>
-              <circle class="cbar" cx="50" cy="50" r="45"></circle>
-            </svg><span>Data Analysis</span><small></small>
-          </li>
-          <li data-percent="50">
-            <svg viewbox="0 0 100 100">
-              <circle cx="50" cy="50" r="45"></circle>
-              <circle class="cbar" cx="50" cy="50" r="45"></circle>
-            </svg><span>AI</span><small></small>
-          </li>
-        </ul>
-      </div>
-      <div class="interests">
-        <h3><i class="fas fa-star"></i>Interests</h3>
-        <div class="interests-items">
-          <div class="games"><i class="fas fa-search"></i><span>Research</span></div>
-          <div class="music"><i class="fas fa-headphones"></i><span>Electronic Music</span></div>
-          <div class="games"><i class="fas fa-futbol"></i><span>Football</span></div>
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+      <div class="my-auto">
+        <h2 class="mb-5">Experience</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">Internship</h3>
+            <div class="subheading mb-3">CNR - National Research Council</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">Jan 2018 - July 2018</span>
+          </div>
         </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">System Administrator</h3>
+            <div class="subheading mb-3">Assenza di Segnale</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">July 2012 - Sep 2014</span>
+          </div>
+        </div>
+
       </div>
-    </div>
+
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+      <div class="my-auto">
+        <h2 class="mb-5">Education</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">University of Pisa</h3>
+            <div class="subheading mb-3">Master of Science</div>
+            <div>Computer Science - ICT Solution Architect</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">Present</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">University of Bari</h3>
+            <div class="subheading mb-3">Bachelor of Science</div>
+            <div>Computer Science and Software Production Technologies</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">July 2018</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+      <div class="my-auto">
+        <h2 class="mb-5">Skills</h2>
+
+        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+        <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <i class="fab fa-java"></i>
+            <p class="lead mb-5">Java</p>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-python"></i>
+            <p class="lead mb-5">Python</p>
+          </li>
+        </ul>
+
+        <div class="subheading mb-3">Technologies</div>
+        <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <i class="fab fa-git"></i>
+            <p class="lead mb-5">Git</p>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-docker"></i>
+            <p class="lead mb-5">Docker</p>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-apple"></i>
+            <p class="lead mb-5">MacOS</p>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-linux"></i>
+            <p class="lead mb-5">Linux</p>
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
 
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <script src="js/index.js"></script>
-
-
-
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
 
 </body>
 
