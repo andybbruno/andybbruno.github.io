@@ -1,3 +1,3 @@
 # andybbruno.github.io
 
-<a href="https://andybbruno.github.io">My Curriculum Vitae</a>
+<a href="https://andybbruno.github.io">CV / Resume</a>
