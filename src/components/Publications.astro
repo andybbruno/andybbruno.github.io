@@ -1,0 +1,55 @@
+---
+import { siteConfig } from "../config";
+
+const hasPublications =
+  siteConfig.publications && siteConfig.publications.length > 0;
+---
+
+{
+  hasPublications && (
+    <section id="publications" class="p-8 sm:p-12 md:p-16 lg:p-24">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+              Publications
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          <div class="lg:col-span-8">
+            <div class="space-y-8">
+              {siteConfig.publications.map((publication, index) => (
+                <a
+                  href={publication.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group block p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-xl hover:border-gray-300 hover:-translate-y-1"
+                >
+                  <div class="space-y-4">
+                    <div>
+                      <h3 class="text-xl sm:text-2xl font-bold text-gray-900 pr-8">
+                        {publication.title}
+                      </h3>
+                    </div>
+
+                    <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                      {publication.authors}
+                    </p>
+
+                    <span class="inline-flex px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 group-hover:bg-gray-800">
+                      {publication.type}
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
