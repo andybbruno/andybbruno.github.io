@@ -1,0 +1,88 @@
+---
+import { siteConfig } from "../config";
+
+const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
+const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+const hasSkills =
+  siteConfig.skills &&
+  (siteConfig.skills.core?.length > 0 ||
+    siteConfig.skills.technologies?.length > 0 ||
+    siteConfig.skills.cloudProviders?.length > 0);
+const hasPublications =
+  siteConfig.publications && siteConfig.publications.length > 0;
+---
+
+<header
+  id="header"
+  class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-300"
+>
+  <nav class="max-w-7xl mx-auto px-8 py-4">
+    <ul class="flex items-center gap-8 justify-center">
+      {
+        hasExperience && (
+          <li>
+            <a
+              href="#experience"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Experience
+            </a>
+          </li>
+        )
+      }
+      {
+        hasEducation && (
+          <li>
+            <a
+              href="#education"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Education
+            </a>
+          </li>
+        )
+      }
+      {
+        hasSkills && (
+          <li>
+            <a
+              href="#skills"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Skills
+            </a>
+          </li>
+        )
+      }
+      {
+        hasPublications && (
+          <li>
+            <a
+              href="#publications"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Publications
+            </a>
+          </li>
+        )
+      }
+    </ul>
+  </nav>
+</header>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const header = document.getElementById("header");
+    if (window.scrollY > 100) {
+      header?.classList.add("bg-white/80", "backdrop-blur-sm");
+    } else {
+      header?.classList.remove("bg-white/80", "backdrop-blur-sm");
+    }
+  });
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
