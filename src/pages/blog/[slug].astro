@@ -1,0 +1,58 @@
+---
+import { getCollection, render } from "astro:content";
+import { siteConfig } from "../../config";
+import Footer from "../../components/Footer.astro";
+import "../../styles/global.css";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={post.data.description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{post.data.title} - {siteConfig.name}</title>
+  </head>
+  <body>
+    <header class="border-b border-gray-200">
+      <nav class="max-w-3xl mx-auto px-6 py-4">
+        <a
+          href="/#blog"
+          class="inline-flex items-center gap-2 text-gray-700 hover:text-black transition-colors font-medium"
+        >
+          <span aria-hidden="true">←</span>
+          Back to home
+        </a>
+      </nav>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 py-12 sm:py-16">
+      <article
+        class="prose prose-gray max-w-none prose-headings:font-bold prose-a:text-[var(--accent-color)] prose-img:rounded-xl prose-pre:rounded-xl"
+        style={`--accent-color: ${siteConfig.accentColor}`}
+      >
+        <Content />
+      </article>
+    </main>
+
+    <Footer />
+  </body>
+</html>

@@ -1,6 +1,8 @@
 ---
 import { siteConfig } from "../config";
+import { getCollection } from "astro:content";
 
+const hasBlog = (await getCollection("blog")).length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 const hasSkills =
@@ -62,6 +64,18 @@ const hasPublications =
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
               Publications
+            </a>
+          </li>
+        )
+      }
+      {
+        hasBlog && (
+          <li>
+            <a
+              href="#blog"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Blog
             </a>
           </li>
         )
