@@ -3,6 +3,7 @@ title: "Data Pipeline at Near Zero Cost: A Serverless Architecture on GCP"
 description: "How to build a fully automated, serverless data pipeline on Google Cloud Platform that drives operational cost to near zero for low-to-medium volume workloads."
 slug: "data-pipeline-near-zero-cost"
 order: 1
+cover: "./img/cover-1.png"
 ---
 
 # **Data Pipeline at Near Zero Cost: A Serverless Architecture on GCP**

@@ -3,6 +3,7 @@ title: "How to Build a Private, Scalable LLM Infrastructure"
 description: "Moving beyond managed APIs toward private, serverless GPU infrastructure for open-weights LLMs using Modal and vLLM."
 slug: "private-scalable-llm-infrastructure"
 order: 2
+cover: "./img/cover-2.png"
 ---
 
 # **How to Build a Private, Scalable LLM Infrastructure**

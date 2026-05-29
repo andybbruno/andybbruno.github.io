@@ -3,6 +3,7 @@ title: "Building a Production-Ready Zero-Shot Document Classifier"
 description: "Building a document classification pipeline with no fine-tuning and no training data by decomposing the problem into narrow, deterministic decisions."
 slug: "zero-shot-document-classifier"
 order: 3
+cover: "./img/cover-3.png"
 ---
 
 # **Building a Production-Ready Zero-Shot Document Classifier**

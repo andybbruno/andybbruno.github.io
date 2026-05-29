@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 import { siteConfig } from "../config";
 
 const posts = (await getCollection("blog")).sort(
@@ -28,9 +29,16 @@ const hasPosts = posts.length > 0;
               {posts.map((post) => (
                 <a
                   href={`/blog/${post.data.slug}`}
-                  class="group block p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-xl hover:border-gray-300 hover:-translate-y-1"
+                  class="group flex flex-col sm:flex-row bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-gray-300 hover:-translate-y-1"
                 >
-                  <div class="space-y-4">
+                  {post.data.cover && (
+                    <Image
+                      src={post.data.cover}
+                      alt={post.data.title}
+                      class="w-full sm:w-40 md:w-48 lg:w-56 shrink-0 aspect-[16/9] sm:aspect-auto object-cover border-b sm:border-b-0 sm:border-r border-gray-200"
+                    />
+                  )}
+                  <div class="space-y-4 p-4 sm:p-6 md:p-8">
                     <h3 class="text-xl sm:text-2xl font-bold text-gray-900 pr-8">
                       {post.data.title}
                     </h3>
